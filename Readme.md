@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Игорь Антонов](https://up.htmlacademy.ru/adaptive/13/user/3162).
-* Наставник: `Неизвестно`.
+* Наставник: `Без наставника`.
 
 ---
 
