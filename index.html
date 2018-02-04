@@ -83,19 +83,19 @@
             <section class="reviews">
                 <h2 class="visually-hidden">Отзывы</h2>            
                 <div class="reviews__wrapper">
-                    <button class="reviews__switch  reviews__switch--prev" type="button">Назад</button>
+                    <button class="reviews__pager  reviews__pager--prev" type="button">Назад</button>
                     <div class="reviews__list">
                         <blockquote class="reviews__item">
                             <cite class="reviews__footer">
                                 <b class="reviews__author">Николай Петров</b>
-                                <span class="reviews__tag">25 лет, водитель трамвая</span>
+                                <span class="reviews__author-desc">25 лет, водитель трамвая</span>
                             </cite>
                             <p class="reviews__text">
                             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
                             </p>
                         </blockquote>
                     </div>
-                    <button class="reviews__switch  reviews__switch--next" type="button">Вперед</button>
+                    <button class="reviews__pager  reviews__pager--next" type="button">Вперед</button>
                 </div>
                 <div class="controls  controls--reviews">
                     <button class="controls__toggle  controls__toggle--current" type="button"></button>
@@ -108,16 +108,16 @@
                 <table  class="price__table">
                     <thead>
                         <tr>
-                            <th class="price__name  price__name--transparent"></th>
-                            <th class="price__name">
+                            <th class="price__title  price__title--transparent"></th>
+                            <th class="price__title">
                                 База
                                 <span>1,99 USD</span>
                             </th>
-                            <th class="price__name  price__name--hit">
+                            <th class="price__title  price__title--hit">
                                 Стандарт
                                 <span>3,99 USD</span>
                             </th>
-                            <th class="price__name">
+                            <th class="price__title">
                                 Анлим
                                 <span>9,99 USD</span>
                             </th>
@@ -125,47 +125,47 @@
                     </thead>
                     <tbody>
                         <tr class="price__row">
-                            <td class="price__item  price__item--feature-name">Розовый фильтр</td>
+                            <td class="price__item  price__item--feature-title">Розовый фильтр</td>
                             <td class="price__item  price__item--yes">
-                                <span class="price__feature-name">Розовый фильтр</span>
+                                <span class="price__feature-title">Розовый фильтр</span>
                                 <span class="price__feature-status">Да</span>
                             </td>
                             <td class="price__item  price__item--yes">
-                                <span class="price__feature-name">Розовый фильтр</span>
+                                <span class="price__feature-title">Розовый фильтр</span>
                                 <span class="price__feature-status">Да</span>
                             </td>
                             <td class="price__item  price__item--yes">
-                                <span class="price__feature-name">Розовый фильтр</span>
-                                <span class="price__feature-status">Да</span>
-                            </td>
-                        </tr>
-                        <tr class="price__row">
-                            <td class="price__item  price__item--feature-name">Смайлики</td>
-                            <td class="price__item  price__item--no">
-                                <span class="price__feature-name">Смайлики</span>
-                                <span class="price__feature-status">Нет</span>
-                            </td>
-                            <td class="price__item  price__item--yes">
-                                <span class="price__feature-name">Смайлики</span>
-                                <span class="price__feature-status">Да</span>
-                            </td>
-                            <td class="price__item  price__item--yes">
-                                <span class="price__feature-name">Смайлики</span>
+                                <span class="price__feature-title">Розовый фильтр</span>
                                 <span class="price__feature-status">Да</span>
                             </td>
                         </tr>
                         <tr class="price__row">
-                            <td class="price__item  price__item--feature-name">Комментарии</td>
+                            <td class="price__item  price__item--feature-title">Смайлики</td>
                             <td class="price__item  price__item--no">
-                                <span class="price__feature-name">Комментарии</span>
-                                <span class="price__feature-status">Нет</span>
-                            </td>
-                            <td class="price__item  price__item--no">
-                                <span class="price__feature-name">Комментарии</span>
+                                <span class="price__feature-title">Смайлики</span>
                                 <span class="price__feature-status">Нет</span>
                             </td>
                             <td class="price__item  price__item--yes">
-                                <span class="price__feature-name">Комментарии</span>
+                                <span class="price__feature-title">Смайлики</span>
+                                <span class="price__feature-status">Да</span>
+                            </td>
+                            <td class="price__item  price__item--yes">
+                                <span class="price__feature-title">Смайлики</span>
+                                <span class="price__feature-status">Да</span>
+                            </td>
+                        </tr>
+                        <tr class="price__row">
+                            <td class="price__item  price__item--feature-title">Комментарии</td>
+                            <td class="price__item  price__item--no">
+                                <span class="price__feature-title">Комментарии</span>
+                                <span class="price__feature-status">Нет</span>
+                            </td>
+                            <td class="price__item  price__item--no">
+                                <span class="price__feature-title">Комментарии</span>
+                                <span class="price__feature-status">Нет</span>
+                            </td>
+                            <td class="price__item  price__item--yes">
+                                <span class="price__feature-title">Комментарии</span>
                                 <span class="price__feature-status">Да</span>
                             </td>
                         </tr>
@@ -178,22 +178,22 @@
                 </div>
             </section>
             <section class="contacts">
-                <h2 class="contacts__title">
+                <h2 class="contacts__main-title">
                     Остались вопросы?
                     Свяжитесь с нами!
                 </h2>
                 <div class="contacts__inner">
                     <div class="contacts__item  contacts__item--tel">
-                        <b class="contacts__name">Звоните:</b>
+                        <b class="contacts__title">Звоните:</b>
                         <span class="contacts__text">+7 (812) 555-66-66</span>
                     </div>
                     <div class="contacts__item  contacts__item--email">
-                        <b class="contacts__name">Пишите:</b>
+                        <b class="contacts__title">Пишите:</b>
                         <a class="contacts__link" href="#">mail@htmlacademy.ru</a>
                     </div>
                     <div class="contacts__item  contacts__item--address">
-                        <b class="contacts__name">Приезжайте в гости:</b>
-                        <span class="contacts__text">
+                        <b class="contacts__title">Приезжайте в гости:</b>
+                        <span class="contacts__address">
                             ул. Большая Конюшенная, 19/8
                         </span>
                     </div>
@@ -201,5 +201,16 @@
                 <div class="contacts__map" id="map"></div>
             </section> 
         </main>
+        <footer class="page-footer  page-footer--index">
+            <a class="logo logo--footer" href="index.html"></a>
+            <p class="social">
+                <a class="social__link" href="#">Мы в Твитере</a>
+                <a class="social__link" href="#">Мы в Фейсбуке</a>
+                <a class="social__link" href="#">Мы в Ютюбе</a>
+            </p>
+            <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+                <span>Разработано</span>            
+            </a>
+        </footer>        
     </body>
 </html>
