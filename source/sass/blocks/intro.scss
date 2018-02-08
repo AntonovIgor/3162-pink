@@ -1,0 +1,257 @@
+.intro {
+  box-sizing: border-box;
+  min-height: 170px;
+  margin-top: -70px;
+
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 700px 462px;
+
+  &--start {
+    background-size: 256px 286px, 700px 462px;
+
+    @include retina {
+    }
+  }
+
+  &__wrapper {
+    &--start {
+      display: flex;
+      flex-direction: column;
+      padding-top: 493px;
+      padding-right: 20px;
+      padding-left: 19px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__title {
+    @include font-set(300, 24px, 29px);
+
+    min-height: 87px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 99px;
+    padding-right: 20px;
+    padding-bottom: 54px;
+    padding-left: 20px;
+
+    color: $secondary-color;
+    text-align: center;
+
+    &--start {
+      display: none;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 56px;
+    margin-top: 32px;
+    padding-right: 0px;
+  }
+
+  &__svg {
+    &--android {
+      margin-right: 38px;
+      margin-left: 34px;
+    }
+
+    &--winphone {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__text {
+    @include font-set(300, 14px, 24px);
+
+    margin-top: 22px;
+    margin-bottom: 0;
+
+    color: $secondary-color;
+    text-align: center;
+  }
+
+  &__btn {
+    transition-duration: 0.25s;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $third-color;
+    }
+
+    &:active {
+      color: transparentize($third-color, 0.7);
+    }
+  }
+}
+
+@include MQ(M) {
+  .intro {
+    @include center();
+
+    margin-top: -110px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 1200px 729px;
+
+    &--start {
+      background-position: right -20px bottom 0, center;
+      background-repeat: no-repeat;
+      background-size: 700px 545px, 1200px 729px;
+    }
+
+    @include retina {
+    }
+
+    &__wrapper {
+      box-sizing: border-box;
+      width: 660px;
+      padding-top: 80px;
+      padding-right: 20px;
+      padding-bottom: 0;
+      padding-left: 20px;
+
+      text-align: center;
+
+      &--start {
+        padding-top: 103px;
+
+        background-repeat: no-repeat;
+      }
+
+      &--gallery {
+        min-height: 439px;
+      }
+    }
+
+    &__title {
+      @include margin-center();
+      @include font-set(300, 50px, 60px);
+
+      width: 480px;
+      padding-bottom: 80px;
+
+      color: $secondary-color;
+
+      &--start {
+        @include font-set(300, 40px, 48px);
+        display: block;
+        width: 200px;
+        min-height: 140px;
+        margin-top: 0;
+        margin-left: 30px;
+        margin-bottom: 0;
+        padding-bottom: 0px;
+      }
+    }
+
+    &__btn {
+      width: 300px;
+      margin-top: 31px;
+    }
+
+    &__inner {
+      width: 300px;
+      margin-top: 46px;
+    }
+
+    &__svg {
+      &--android {
+        margin-left: 37px;
+        margin-bottom: 3px;
+      }
+
+      &--winphone {
+        margin-bottom: 3px;
+      }
+    }
+
+    &__text {
+      width: 300px;
+      margin-top: 36px;
+      margin-bottom: 110px;
+
+      font-size: 18px;
+    }
+  }
+}
+
+@include MQ(L) {
+  .intro {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 2560px 853px;
+
+    &--start {
+      padding-top: 100px;
+
+      background-position: center;
+    }
+
+    @include retina {
+    }
+
+    &__wrapper {
+      width: 800px;
+      min-height: 284px;
+      padding-right: 10px;
+      padding-left: 10px;
+
+      &--start {
+        width: 960px;
+        padding-top: 20px;
+
+        background-position: right -116px bottom 0;
+        background-size: 1050px 645px;
+
+        @include retina {
+        }
+      }
+    }
+
+    &__title {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 93px;
+      padding-bottom: 101px;
+
+      &--start {
+        @include font(50px, 59px);
+
+        display: block;
+        width: 250px;
+        min-height: 165px;
+        margin-top: 0;
+        margin-left: 25px;
+        margin-bottom: 0;
+        padding-top: 100px;
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+      }
+    }
+
+    &__btn {
+      width: 300px;
+      margin-top: 53px;
+      padding-right: 10px;
+      padding-bottom: 14px;
+      padding-left: 10px;
+    }
+
+    &__inner {
+      width: 300px;
+      margin-top: 68px;
+    }
+
+    &__text {
+      width: 300px;
+      margin-top: 55px;
+      margin-bottom: 121px;
+    }
+  }
+}
