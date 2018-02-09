@@ -1,8 +1,6 @@
 .features {
   &__main-title {
     @include font-set(300, 24px, 29px);
-
-    //box-sizing: border-box;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 40px;
@@ -11,19 +9,21 @@
     text-align: center;
   }
 
-  &__span {
-    @include margin-center();
 
-    display: block;
+    &__span {
+      @include margin-center();
 
-    &--top {
-      margin-bottom: 28px;
+      display: block;
+
+      &--top {
+        margin-bottom: 28px;
+      }
     }
-  }
 
   &__wrapper {
     width: 100%;
     background-color: $twelfth-color;
+    background-image: url(../img/bg/bg-triangle-white.svg);
     background-repeat: no-repeat;
     background-position: -5px 0;
     background-size: contain;
@@ -40,15 +40,18 @@
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 284px;
+
+    background-image: url(../img/iphone-screen/iphone-screen-mobile@1x.png);
     background-repeat: no-repeat;
     background-position: left 50% bottom -42px;
     background-size: 157px 320px;
 
     @include retina {
+      background-image: url(../img/iphone-screen/iphone-screen-mobile@2x.png);
     }
   }
 
-  &__name {
+  &__title {
     @include font(18px, 18px);
   }
 
@@ -58,7 +61,7 @@
     text-align: center;
   }
 
-  &__text {
+  &__description {
     @include font(14px, 24px);
 
     margin-bottom: 0;
@@ -67,7 +70,7 @@
 
 @include MQ(M) {
   .features {
-    &__title {
+    &__main-title {
       @include font(40px, 48px);
 
       padding-top: 49px;
@@ -92,11 +95,14 @@
     &__inner {
       @include margin-center();
       width: 660px;
+
+      background-image: url(../img/iphone-screen/iphone-screen-3-tablet@1x.png);
       background-repeat: no-repeat;
       background-position: left 21px bottom 0;
       background-size: 268px 481px;
 
       @include retina {
+        background-image: url(../img/iphone-screen/iphone-screen-3-tablet@2x.png)
       }
     }
 
@@ -167,13 +173,25 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       background-size: 292px 302px;
+
+      &--first {
+        background-image: url(../img/iphone-screen/iphone-screen-1-desktop@1x.png);
+      }
+
+      &--second {
+        background-image: url(../img/iphone-screen/iphone-screen-2-desktop@1x.png);
+      }
+
+      &--third {
+        background-image: url(../img/iphone-screen/iphone-screen-3-desktop@1x.png);
+      }
     }
 
-    &__name {
+    &__title {
       @include font(30px, 30px);
     }
 
-    &__text {
+    &__description {
       @include font(18px, 30px);
 
       margin-top: 24px;
