@@ -148,7 +148,7 @@
   }
 }
 
-@include MQ(M) {
+@include media_queries(M) {
   .price {
     padding-top: 88px;
     padding-bottom: 67px;
@@ -231,7 +231,7 @@
 }
 
 
-@include MQ(L) {
+@include media_queries(L) {
   .price {
     padding-top: 154px;
     padding-bottom: 95px;

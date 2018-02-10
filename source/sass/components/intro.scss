@@ -17,7 +17,7 @@
     background-size: 256px 286px,
                      700px 462px;
 
-    @include retina {
+    @include high-dpi {
       background-image: url(../img/iphone-screen/iphone-hand-mobile@2x.png),
                         url(../img/bg/bg-back-mobile@2x.jpg);
     }
@@ -97,7 +97,7 @@
   }
 }
 
-@include MQ(M) {
+@include media_queries(M) {
   .intro {
     @include center();
 
@@ -118,7 +118,7 @@
                        1200px 729px;
     }
 
-    @include retina {
+    @include high-dpi {
       background-image: url(../img/iphone-screen/iphone-hand-tablet@2x.png),
                         url(../img/bg/bg-back-tablet@2x.jpg);
 
@@ -198,7 +198,7 @@
   }
 }
 
-@include MQ(L) {
+@include media_queries(L) {
   .intro {
     background-image: url(../img/bg/bg-back-desktop@1x.jpg);
     background-position: center top;
@@ -211,7 +211,7 @@
       background-position: center;
     }
 
-    @include retina {
+    @include high-dpi {
       background-image: url(../img/bg/bg-back-desktop@2x.jpg);
     }
 
@@ -229,7 +229,7 @@
         background-position: right -116px bottom 0;
         background-size: 1050px 645px;
 
-        @include retina {
+        @include high-dpi {
           background-image: url(../img/iphone-screen/iphone-hand-desktop@2x.png);
         }
       }

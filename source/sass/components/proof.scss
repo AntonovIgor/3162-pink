@@ -2,7 +2,7 @@
   display: none;
 }
 
-@include MQ(M){
+@include media_queries(M){
   .proof {
     display: block;
 
@@ -86,7 +86,7 @@
   }
 }
 
-@include MQ(L) {
+@include media_queries(L) {
   .proof {
     background-color: $twelfth-color;
 

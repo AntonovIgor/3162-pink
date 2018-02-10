@@ -159,7 +159,7 @@
   }
 }
 
-@include MQ(M) {
+@include media_queries(M) {
   .main-nav {
     height: 110px;
 
@@ -197,7 +197,7 @@
   }
 }
 
-@include MQ(L) {
+@include media_queries(L) {
   .main-nav {
     display: flex;
     align-items: center;

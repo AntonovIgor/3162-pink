@@ -1,20 +1,14 @@
-@mixin MQ($canvas) {
+@mixin media_queries($canvas) {
   @if $canvas == M {
-    @media only screen and (min-width: $M) {
+    @media only screen and (min-width: $Midle) {
       @content;
     }
   }
 
   @else if $canvas == L {
-    @media only screen and (min-width: $L) {
+    @media only screen and (min-width: $Long) {
       @content;
     }
-  }
-}
-
-@mixin retina {
-  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-    @content;
   }
 }
 
@@ -22,6 +16,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin high-dpi {
+  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    @content;
+  }
 }
 
 @mixin margin-center() {

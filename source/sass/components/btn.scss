@@ -17,7 +17,7 @@
   border-radius: 50px;
 }
 
-@include MQ(L) {
+@include media_queries(L) {
   .btn {
     @include font(21px, 21px);
   }

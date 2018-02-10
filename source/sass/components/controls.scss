@@ -40,7 +40,7 @@
   }
 }
 
-@include MQ(M) {
+@include media_queries(M) {
   .controls {
     &--reviews {
       margin-top: 37px;
@@ -52,7 +52,7 @@
   }
 }
 
-@include MQ(L) {
+@include media_queries(L) {
   .controls {
     &--reviews {
       display: none;

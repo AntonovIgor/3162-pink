@@ -83,13 +83,13 @@
       background-size: 100% 100%;
     }
 
-    @include retina {
+    @include high-dpi {
       background-image: url(../img/bg/bg-map-mobile@2x.jpg);
     }
   }
 }
 
-@include MQ(M) {
+@include media_queries(M) {
   .contacts {
     padding-top: 46px;
 
@@ -136,14 +136,14 @@
         height: 68px;
       }
 
-      @include retina {
+      @include high-dpi {
         background-image: url(../img/bg/bg-map-tablet@2x.jpg);
       }
     }
   }
 }
 
-@include MQ(L) {
+@include media_queries(L) {
   .contacts {
     padding-top: 63px;
 

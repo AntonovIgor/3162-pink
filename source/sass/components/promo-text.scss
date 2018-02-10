@@ -31,7 +31,7 @@
   }
 }
 
-@include MQ(M) {
+@include media_queries(M) {
   .promo-text {
     padding-right: 100px;
     padding-left: 100px;
@@ -61,7 +61,7 @@
   }
 }
 
-@include MQ(L) {
+@include media_queries(L) {
   .promo-text {
     @include margin-center();
 

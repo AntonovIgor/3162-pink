@@ -5,17 +5,17 @@
   background-color: #1d2631;
 }
 
-@include MQ(M) {
+@include media_queries(M) {
   .page-header {
-    &--index {
+    &--start {
       min-height: 984px;
     }
   }
 }
 
-@include MQ(L) {
+@include media_queries(L) {
   .page-header {
-    &--index {
+    &--start {
       min-height: 853px;
     }
   }

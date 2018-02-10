@@ -43,7 +43,7 @@
   }
 }
 
-@include MQ(M) {
+@include media_queries(M) {
   .reviews {
     padding-bottom: 24px;
 
@@ -84,7 +84,7 @@
   }
 }
 
-@include MQ(L) {
+@include media_queries(L) {
   .reviews {
     position: relative;
     padding-top: 18px;

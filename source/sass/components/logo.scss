@@ -27,7 +27,7 @@
 
 }
 
-@include MQ(M) {
+@include media_queries(M) {
   .logo {
     width: 150px;
     height: 41px;
@@ -39,7 +39,7 @@
   }
 }
 
-@include MQ(L) {
+@include media_queries(L) {
   .logo {
     width: 147px;
     height: 40px;

@@ -46,7 +46,7 @@
     background-position: left 50% bottom -42px;
     background-size: 157px 320px;
 
-    @include retina {
+    @include high-dpi {
       background-image: url(../img/iphone-screen/iphone-screen-mobile@2x.png);
     }
   }
@@ -68,7 +68,7 @@
   }
 }
 
-@include MQ(M) {
+@include media_queries(M) {
   .features {
     &__main-title {
       @include font(40px, 48px);
@@ -101,7 +101,7 @@
       background-position: left 21px bottom 0;
       background-size: 268px 481px;
 
-      @include retina {
+      @include high-dpi {
         background-image: url(../img/iphone-screen/iphone-screen-3-tablet@2x.png)
       }
     }
@@ -124,7 +124,7 @@
   }
 }
 
-@include MQ(L) {
+@include media_queries(L) {
   .features {
     &__main-title {
       @include font(50px, 60px);
