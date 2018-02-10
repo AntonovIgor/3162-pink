@@ -16,6 +16,9 @@
   &__toggle {
     @include font(0, 0);
 
+    background-color: transparent;
+    border: none;
+
     position: absolute;
     top: 21px;
     right: 20px;
@@ -24,9 +27,6 @@
     width: 50px;
     height: 24px;
 
-    background-color: transparent;
-    border: none;
-
     &--nojs {
       display: none;
     }
@@ -34,16 +34,16 @@
     &::before {
       @include absolute-pseudo-element();
 
+      background-color: $secondary-color;
+      box-shadow: 0 10px $secondary-color,
+        0 2px 0 -1px transparentize($secondary-color, 0.85);
+      transition-duration: 0.25s;
+
       top: 0;
       left: 0;
 
       width: 50px;
       height: 4px;
-
-      background-color: $secondary-color;
-      box-shadow: 0 10px $secondary-color,
-        0 2px 0 -1px transparentize($secondary-color, 0.85);
-      transition-duration: 0.25s;
     }
 
     &:hover::before {
@@ -55,16 +55,16 @@
     &::after {
       @include absolute-pseudo-element();
 
-      left: 0;
-      bottom: 0;
-
-      width: 50px;
-      height: 4px;
-
       background-color: $secondary-color;
       box-shadow: 0 -2px 0 -1px transparentize($secondary-color, 0.85);
 
       transition-duration: 0.25s;
+
+      left: 0;
+      bottom: 0;
+
+      height: 4px;
+      width: 50px;
     }
 
     &:hover::after {
@@ -75,19 +75,19 @@
       top: 21px;
       right: 20px;
 
-      width: 23px;
       height: 23px;
+      width: 23px;
 
       &::before {
-        top: 50%;
-        left: 50%;
-
-        width: 31px;
-        height: 5px;
-
         border-radius: 2px;
         box-shadow: none;
         transform: translate(-50%, -50%) rotate(-45deg);
+
+        top: 50%;
+        left: 50%;
+
+        height: 5px;
+        width: 31px;
       }
 
       &:hover::before {
@@ -95,15 +95,15 @@
       }
 
       &::after {
-        top: 50%;
-        left: 50%;
-
-        width: 31px;
-        height: 5px;
-
         border-radius: 2px;
         box-shadow: none;
         transform: translate(-50%, -50%) rotate(45deg);
+
+        top: 50%;
+        left: 50%;
+
+        height: 5px;
+        width: 31px;
       }
     }
   }
@@ -142,8 +142,9 @@
     display: block;
     min-height: 64px;
 
-    text-align: center;
     color: $secondary-color;
+
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -202,10 +203,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    align-items: center;
-    overflow: inherit;
 
     background-color: transparentize($fifth-color, 0.7);
+
+    overflow: inherit;
 
     &__toggle {
       display: none;
@@ -219,15 +220,16 @@
     }
 
     &__item {
+      background-color: transparent;
+      box-shadow: none;
+
       display: flex;
       align-items: center;
       margin-left: 62px;
+
       padding-top: 0;
       padding-right: 9px;
       padding-left: 9px;
-
-      background-color: transparent;
-      box-shadow: none;
 
       &--logo {
         margin-right: auto;

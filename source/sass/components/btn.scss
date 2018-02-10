@@ -2,19 +2,18 @@
   @include font-set(700, 18px, 18px);
 
   box-sizing: border-box;
-  width: 100%;
+  font-family: $font-primary;
+  color: $secondary-color;
+  border: 3px solid $secondary-color;
+  border-radius: 50px;
+
   padding-top: 14px;
   padding-right: 30px;
   padding-bottom: 17px;
   padding-left: 30px;
-
-  font-family: $font-primary;
-  color: $secondary-color;
+  width: 100%;
   text-align: center;
   text-decoration: none;
-
-  border: 3px solid $secondary-color;
-  border-radius: 50px;
 }
 
 @include media_queries(L) {

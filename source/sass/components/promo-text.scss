@@ -3,6 +3,7 @@
 
   box-sizing: border-box;
   margin: 0;
+
   padding-right: 30px;
   padding-left: 30px;
 
@@ -65,9 +66,10 @@
   .promo-text {
     @include margin-center();
 
-    width: 960px;
     padding-right: 190px;
     padding-left: 190px;
+
+    width: 960px;
 
     &--top {
       min-height: 240px;

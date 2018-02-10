@@ -1,14 +1,16 @@
 .price {
-  width: 100%;
+  background-color: $twelfth-color;
+  background-image: url("../img/bg/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: -5px 0;
+  background-size: contain;
+
   padding-top: 91px;
   padding-bottom: 50px;
   overflow: hidden;
 
-  background-color: $twelfth-color;
-  background-image: url(../img/bg/bg-triangle-white.svg);
-  background-repeat: no-repeat;
-  background-position: -5px 0;
-  background-size: contain;
+  width: 100%;
+
 
   &__table {
     position: relative;
@@ -26,16 +28,17 @@
     @include font-set(700, 18px, 30px);
 
     box-sizing: border-box;
-    width: 280px;
-    height: 98px;
-
-    color: $secondary-color;
-    text-transform: uppercase;
 
     background-color: $primary-color;
     border: 2px solid $fourth-color;
     border-top: none;
     border-bottom: none;
+
+    color: $secondary-color;
+    text-transform: uppercase;
+
+    width: 280px;
+    height: 98px;
 
     &--transparent {
       display: none;
@@ -55,15 +58,16 @@
       &::before {
         @include font-set(400, 14px, 30px);
 
+        background-color: $third-color;
+        transform: rotate(-45deg);
+
         content: "хит";
+
         position: absolute;
         top: 12px;
         left: -38px;
 
         width: 120px;
-
-        background-color: $third-color;
-        transform: rotate(-45deg);
       }
     }
   }
@@ -75,16 +79,15 @@
   &__item {
     @include font(14px, 30px);
 
-    position: relative;
-
     box-sizing: border-box;
-    height: 61px;
+    border: 2px solid $fourth-color;
+    border-top: none;
+
+    position: relative;
     padding-left: 22px;
 
     text-transform: uppercase;
-
-    border: 2px solid $fourth-color;
-    border-top: none;
+    height: 61px;
 
     &--feature-title {
       display: none;
@@ -95,16 +98,16 @@
         @include absolute-pseudo-element();
 
         box-sizing: border-box;
-        top: 18px;
-        right: 18px;
-
-        width: 30px;
-        height: 15px;
-
         border: 3px solid $thirteenth-color;
         border-top: none;
         border-right: none;
         transform: rotate(-45deg);
+
+        top: 18px;
+        right: 18px;
+
+        height: 15px;
+        width: 30px;
       }
     }
 
@@ -112,21 +115,26 @@
       &::before {
         @include absolute-pseudo-element();
 
+        background-color: $fourteenth-color;
+        border-radius: 5px;
+        transform: rotate(-44deg);
+
         box-sizing: border-box;
+
         top: 26px;
         right: 15px;
 
         width: 35px;
         height: 3px;
-
-        background-color: $fourteenth-color;
-        border-radius: 5px;
-        transform: rotate(-44deg);
       }
 
       &::after {
         @include absolute-pseudo-element();
 
+        background-color: $fourteenth-color;
+        border-radius: 5px;
+        transform: rotate(45deg);
+
         box-sizing: border-box;
         top: 26px;
         right: 15px;
@@ -134,9 +142,6 @@
         width: 35px;
         height: 3px;
 
-        background-color: $fourteenth-color;
-        border-radius: 5px;
-        transform: rotate(45deg);
       }
     }
   }
@@ -259,9 +264,10 @@
     }
 
     &__item {
+      padding-left: 21px;
+
       width: 25%;
       height: 61px;
-      padding-left: 21px;
 
       &--feature-title {
         font-size: 18px;

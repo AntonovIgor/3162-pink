@@ -13,7 +13,7 @@
   &__svg-footer {
     &-mobile {
       fill: $primary-color;
-      transition: .15s;
+      transition: 0.15s;
 
       &:hover {
         fill: $third-color;
@@ -24,7 +24,6 @@
       display: none;
     }
   }
-
 }
 
 @include media_queries(M) {
@@ -33,8 +32,8 @@
     height: 41px;
 
     &--footer {
-      width: 150px;
       margin-bottom: 15px;
+      width: 150px;
     }
   }
 }

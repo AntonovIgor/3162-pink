@@ -35,7 +35,7 @@
         width: 238px;
         height: 275px;
 
-        background-image: url(../img/icons/timer.svg);
+        background-image: url("../img/icons/timer.svg");
         background-repeat: no-repeat;
         background-size: 238px 275px;
       }
@@ -64,9 +64,10 @@
     &__title {
       @include font-set(700, 30px, 36px);
 
-      width: 200px;
       margin-top: 36px;
       margin-bottom: 0px;
+
+      width: 200px;
     }
 
     &__text {
@@ -102,7 +103,11 @@
       width: 583px;
 
       &::before {
+        background-image: url("../img/icons/timer.svg");
+        background-size: 298px 345px;
+
         content: "";
+
         position: absolute;
         top: 0;
         left: -365px;
@@ -111,37 +116,36 @@
         box-sizing: border-box;
         width: 298px;
         height: 345px;
-
-        background-image: url(../img/icons/timer.svg);
-        background-size: 298px 345px;
       }
 
       &::after {
         @include font(120px, 205px);
 
         content: "24";
-        position: absolute;
-        top: 69px;
-        left: -343px;
 
         box-sizing: border-box;
-        width: 253px;
-        height: 253px;
+        position: absolute;
 
+        border-width: 17px;
         color: $third-color;
         text-align: center;
         vertical-align: middle;
 
-        border-width: 17px;
+        top: 69px;
+        left: -343px;
+
+        height: 253px;
+
+        width: 253px;
       }
     }
 
     &__title {
       @include font-set(700, 30px, 36px);
 
-      width: 100%;
       margin-top: 91px;
       margin-bottom: 0px;
+      width: 100%;
     }
 
     &__text {
