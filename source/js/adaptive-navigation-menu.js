@@ -24,7 +24,7 @@
     mainNavigationMenuList.classList.remove(MAIN_NAV_LIST_NOJS_CLASS);
     mainNavigationMenuItem.classList.remove(MAIN_NAV_ITEM_NOJS_CLASS);
 
-    mainNavigationMenuToggleBtn.addEventListener("click", function(evt) {
+    mainNavigationMenuToggleBtn.addEventListener('click', function(evt) {
         evt.preventDefault();
 
         if (mainNavigationMenu.classList.contains(MAIN_NAV_OPEN_CLASS)) {
