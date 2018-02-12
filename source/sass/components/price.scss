@@ -141,7 +141,6 @@
 
         width: 35px;
         height: 3px;
-
       }
     }
   }
@@ -203,7 +202,7 @@
 
       &--yes {
         &::before {
-          top: 0px;
+          top: 0;
           right: 50%;
 
           transform: translate(50%, 67%) rotate(-45deg);
