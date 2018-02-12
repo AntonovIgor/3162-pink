@@ -6,9 +6,13 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var pump = require('pump');
+var svgmin = require('gulp-svgmin');
+var svgstore = require('gulp-svgstore');
+var rename = require('gulp-rename');
 
 gulp.task("style", function() {
-  gulp.src("source/sass/style.scss")
+  gulp.src("source/sass/main.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
@@ -18,7 +22,17 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task("serve", ["style"], function() {
+gulp.task('makeSprite', function() {
+  pump([
+    gulp.src('source/img/icons/*.svg'),
+    svgmin(),
+    svgstore({ inlineSvg: true} ),
+    rename('sprite.svg'),
+    gulp.dest('source/img/icons')
+  ]);
+});
+
+gulp.task("serve", ["style", "makeSprite"], function() {
   server.init({
     server: "source/",
     notify: false,

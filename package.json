@@ -2,15 +2,19 @@
   "name": "pink",
   "version": "13.0.0",
   "private": true,
-  "description": "Личный проект «Пинк» от HTML Academy",
+  "description": "Личный проект «Пинк» от HTML Academy",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "7.2.x",
     "browser-sync": "2.23.x",
     "gulp": "3.9.x",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "7.0.x",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "3.1.x",
-    "@htmlacademy/editorconfig-cli": "1.x",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1",
+    "pump": "^3.0.0",
     "stylelint": "8.4.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
@@ -31,7 +35,6 @@
     "*.js",
     "source/*.html",
     "source/js/**/*.js",
-    "source/img/**/*.svg",
     "source/sass/**/*.{sass,scss}"
   ],
   "engines": {

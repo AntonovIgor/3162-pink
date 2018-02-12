@@ -1,0 +1,22 @@
+.page-header {
+  box-sizing: border-box;
+  width: 100%;
+
+  background-color: #1d2631;
+}
+
+@include media_queries(M) {
+  .page-header {
+    &--start {
+      min-height: 984px;
+    }
+  }
+}
+
+@include media_queries(L) {
+  .page-header {
+    &--start {
+      min-height: 853px;
+    }
+  }
+}

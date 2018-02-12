@@ -1,0 +1,38 @@
+.gallery {
+  width: 100%;
+
+  &__wrapper {
+    @include margin-center();
+
+    box-sizing: border-box;
+
+    padding-right: 20px;
+    padding-left: 20px;
+
+    width: 100%;
+  }
+}
+
+@include media_queries(M) {
+  .gallery {
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+}
+
+@include media_queries(L) {
+  .gallery {
+    &__wrapper {
+      padding-right: 0;
+      padding-left: 0;
+
+      width: 960px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.logo {
+  display: block;
+
+  width: 75px;
+  height: 22px;
+
+  &--footer {
+    display: block;
+    width: 148px;
+    height: 40px;
+  }
+
+  &__svg-footer {
+    &-mobile {
+      fill: $primary-color;
+      transition: 0.15s;
+
+      &:hover {
+        fill: $third-color;
+      }
+    }
+
+    &-desktop {
+      display: none;
+    }
+  }
+}
+
+@include media_queries(M) {
+  .logo {
+    width: 150px;
+    height: 41px;
+
+    &--footer {
+      margin-bottom: 15px;
+      width: 150px;
+    }
+  }
+}
+
+@include media_queries(L) {
+  .logo {
+    width: 147px;
+    height: 40px;
+
+    &__svg {
+      &-footer {
+        &-mobile {
+          display: none;
+        }
+
+        &-desktop {
+          display: inline;
+        }
+      }
+    }
+  }
+}
