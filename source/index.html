@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк | Главная</title>
   <link rel="stylesheet" href="./css/main.css">
-  <script src="./js/vendor/svg4everybody.js">svg4everybody();</script>
+  <script src="./js/vendor/svg4everybody.js">
+    svg4everybody();
+
+  </script>
   <script src="./js/vendor/picturefill.js"></script>
 </head>
 
@@ -18,9 +21,9 @@
         <li class="main-nav__item  main-nav__item--logo  main-nav__item--logo-open  main-nav__item--nojs">
           <a class="logo">
             <picture>
-                <source media="(min-width: 960px)" srcset="img/logo/logo-desktop@1x.svg 1x, img/logo/logo-desktop@2x.svg 2x">
-                <source media="(min-width: 660px)" srcset="img/logo/logo-tablet.svg">
-                <img src="img/logo/logo-mobile@1x.svg" alt="Лого Pink" srcset="img/logo/logo-mobile@1x.svg 1x, img/logo/logo-mobile@2x.svg 2x">
+              <source media="(min-width: 960px)" srcset="img/logo/logo-desktop@1x.svg 1x, img/logo/logo-desktop@2x.svg 2x">
+              <source media="(min-width: 660px)" srcset="img/logo/logo-tablet.svg">
+              <img src="img/logo/logo-mobile@1x.svg" alt="Лого Pink" srcset="img/logo/logo-mobile@1x.svg 1x, img/logo/logo-mobile@2x.svg 2x">
             </picture>
           </a>
         </li>
@@ -39,25 +42,25 @@
       </ul>
     </nav>
     <div class="intro  intro--start">
-        <div class="intro__wrapper   intro__wrapper--start">
-          <h1 class="intro__title  intro__title--start">Взгляните на жизнь иначе!</h1>
-          <a class="intro__btn  btn" href="#">Скачать приложение</a>
-          <div class="intro__inner">
-            <svg class="intro__svg  intro__svg--apple" width="46" height="56">
-              <use xlink:href="img/icons/sprite.svg#apple"></use>
-            </svg>
-            <svg class="intro__svg  intro__svg--android" width="42" height="47">
-              <use xlink:href="img/icons/sprite.svg#android"></use>
-            </svg>
-            <svg class="intro__svg  intro__svg--microsoft" width="44" height="42">
-              <use xlink:href="img/icons/sprite.svg#microsoft"></use>
-            </svg>
-          </div>
-          <p class="intro__text">
-            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-          </p>
+      <div class="intro__wrapper   intro__wrapper--start">
+        <h1 class="intro__title  intro__title--start">Взгляните на жизнь иначе!</h1>
+        <a class="intro__btn  btn" href="#">Скачать приложение</a>
+        <div class="intro__inner">
+          <svg class="intro__svg  intro__svg--apple" width="46" height="56">
+            <use xlink:href="img/icons/sprite.svg#apple"></use>
+          </svg>
+          <svg class="intro__svg  intro__svg--android" width="42" height="47">
+            <use xlink:href="img/icons/sprite.svg#android"></use>
+          </svg>
+          <svg class="intro__svg  intro__svg--microsoft" width="44" height="42">
+            <use xlink:href="img/icons/sprite.svg#microsoft"></use>
+          </svg>
         </div>
+        <p class="intro__text">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
       </div>
+    </div>
   </header>
   <main class="page-content">
     <section class="features">
@@ -99,7 +102,7 @@
     <section class="reviews">
       <h2 class="visually-hidden">Отзывы</h2>
       <svg class="reviews__svg" width="" height="">
-          <use xlink:href="img/icons/sprite.svg#quotes"></use>
+        <use xlink:href="img/icons/sprite.svg#quotes"></use>
       </svg>
       <div class="reviews__wrapper">
         <button class="reviews__pager  reviews__pager--prev" type="button">Назад</button>
@@ -221,39 +224,39 @@
     </section>
   </main>
   <footer class="page-footer  page-footer--start">
-      <a class="logo logo--footer" href="index.html">
-          <svg class="logo__svg-footer-mobile" width="148" height="40">
-              <use xlink:href="img/icons/sprite.svg#logoFooterMobile"></use>
-          </svg>
-          <svg class="logo__svg-footer-desktop" width="147" height="40">
-            <use xlink:href="img/icons/sprite.svg#logoFooterDesktop"></use>
-          </svg>
-      </a>
-      <p class="social">
-          <a class="social__link" href="#">Мы в Твитере
-              <svg class="social__svg  social__svg--tw" width="17.5" height="14.6">
-                <use xlink:href="img/icons/sprite.svg#tw"></use>
-              </svg>
-            </a>
-            <a class="social__link" href="#">Мы в Фейсбуке
-              <svg class="social__svg  social__svg--fb" width="8.7" height="19">
-                <use xlink:href="img/icons/sprite.svg#fb"></use>
-              </svg>
-            </a>
-            <a class="social__link" href="#">Мы в Ютюбе
-              <svg class="social__svg  social__svg--yt" width="14.6" height="14">
-                <use xlink:href="img/icons/sprite.svg#yt"></use>
-              </svg>
-            </a>        
-      </p>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <span>Разработано</span>
-        <svg class="page-footer__svg-copyright" width="27" height="34">
-            <use xlink:href="img/icons/sprite.svg#htmlacademy"></use>
+    <a class="logo logo--footer" href="index.html">
+      <svg class="logo__svg-footer-mobile" width="148" height="40">
+        <use xlink:href="img/icons/sprite.svg#logoFooterMobile"></use>
+      </svg>
+      <svg class="logo__svg-footer-desktop" width="147" height="40">
+        <use xlink:href="img/icons/sprite.svg#logoFooterDesktop"></use>
+      </svg>
+    </a>
+    <p class="social">
+      <a class="social__link" href="#">Мы в Твитере
+        <svg class="social__svg  social__svg--tw" width="17.5" height="14.6">
+          <use xlink:href="img/icons/sprite.svg#tw"></use>
         </svg>
       </a>
-    </footer>
-    <script src="./js/adaptive-navigation-menu.js"></script>
+      <a class="social__link" href="#">Мы в Фейсбуке
+        <svg class="social__svg  social__svg--fb" width="8.7" height="19">
+          <use xlink:href="img/icons/sprite.svg#fb"></use>
+        </svg>
+      </a>
+      <a class="social__link" href="#">Мы в Ютюбе
+        <svg class="social__svg  social__svg--yt" width="14.6" height="14">
+          <use xlink:href="img/icons/sprite.svg#yt"></use>
+        </svg>
+      </a>
+    </p>
+    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+      <span>Разработано</span>
+      <svg class="page-footer__svg-copyright" width="27" height="34">
+        <use xlink:href="img/icons/sprite.svg#htmlacademy"></use>
+      </svg>
+    </a>
+  </footer>
+  <script src="./js/adaptive-navigation-menu.js"></script>
 </body>
 
 </html>
