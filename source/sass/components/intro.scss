@@ -58,7 +58,7 @@
     align-items: flex-end;
 
     margin-top: 32px;
-    padding-right: 0px;
+    padding-right: 0;
 
     height: 56px;
   }
@@ -154,13 +154,16 @@
 
       &--start {
         @include font-set(300, 40px, 48px);
+
         display: block;
-        width: 200px;
         min-height: 140px;
+
         margin-top: 0;
         margin-left: 30px;
         margin-bottom: 0;
-        padding-bottom: 0px;
+        padding-bottom: 0;
+
+        width: 200px;
       }
     }
 
@@ -277,6 +280,7 @@
     &__text {
       margin-top: 55px;
       margin-bottom: 121px;
+
       width: 300px;
     }
   }
