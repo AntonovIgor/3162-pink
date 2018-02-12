@@ -152,7 +152,7 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .price {
     padding-top: 88px;
     padding-bottom: 67px;
@@ -235,7 +235,7 @@
 }
 
 
-@include media_queries(L) {
+@include media_queries_l() {
   .price {
     padding-top: 154px;
     padding-bottom: 95px;

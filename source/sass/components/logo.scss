@@ -26,7 +26,7 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .logo {
     width: 150px;
     height: 41px;
@@ -38,7 +38,7 @@
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .logo {
     width: 147px;
     height: 40px;

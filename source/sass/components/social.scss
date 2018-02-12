@@ -48,14 +48,14 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .social {
     width: 320px;
     margin: 0;
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .social {
     margin-right: 140px;
     margin-left: 163px;

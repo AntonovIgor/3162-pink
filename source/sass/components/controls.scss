@@ -42,7 +42,7 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .controls {
     &--reviews {
       margin-top: 37px;
@@ -54,7 +54,7 @@
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .controls {
     &--reviews {
       display: none;

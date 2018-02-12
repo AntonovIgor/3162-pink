@@ -139,7 +139,7 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .upload-form {
     display: flex;
     justify-content: space-between;
@@ -230,7 +230,7 @@
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .upload-form {
     @include margin-center();
 

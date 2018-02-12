@@ -46,7 +46,7 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .photo-tweak {
     display: block;
     flex-grow: 1;
@@ -77,7 +77,7 @@
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .photo-tweak {
     margin-right: 30px;
 
