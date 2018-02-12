@@ -130,7 +130,7 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .gallery-item {
     display: flex;
     flex-direction: column;
@@ -141,8 +141,8 @@
     width: 46.8%;
 
     &--famous {
-      margin-right: 0px;
-      margin-left: 0px;
+      margin-right: 0;
+      margin-left: 0;
 
       width: 100%;
 
@@ -224,7 +224,7 @@
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .gallery-item {
     width: 300px;
 

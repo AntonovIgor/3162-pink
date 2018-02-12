@@ -5,7 +5,7 @@
   background-color: #1d2631;
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .page-header {
     &--start {
       min-height: 984px;
@@ -13,7 +13,7 @@
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .page-header {
     &--start {
       min-height: 853px;

@@ -58,7 +58,7 @@
     align-items: flex-end;
 
     margin-top: 32px;
-    padding-right: 0px;
+    padding-right: 0;
 
     height: 56px;
   }
@@ -98,7 +98,7 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .intro {
     @include center();
 
@@ -154,13 +154,16 @@
 
       &--start {
         @include font-set(300, 40px, 48px);
+
         display: block;
-        width: 200px;
         min-height: 140px;
+
         margin-top: 0;
         margin-left: 30px;
         margin-bottom: 0;
-        padding-bottom: 0px;
+        padding-bottom: 0;
+
+        width: 200px;
       }
     }
 
@@ -196,7 +199,7 @@
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .intro {
     background-image: url("../img/bg/bg-back-desktop@1x.jpg");
     background-position: center top;
@@ -277,6 +280,7 @@
     &__text {
       margin-top: 55px;
       margin-bottom: 121px;
+
       width: 300px;
     }
   }

@@ -1,14 +1,12 @@
-@mixin media_queries($canvas) {
-  @if $canvas == M {
-    @media only screen and (min-width: $Midle) {
-      @content;
-    }
+@mixin media_queries_m() {
+  @media only screen and (min-width: $Midle) {
+    @content;
   }
+}
 
-  @else if $canvas == L {
-    @media only screen and (min-width: $Long) {
-      @content;
-    }
+@mixin media_queries_l() {
+  @media only screen and (min-width: $Long) {
+    @content;
   }
 }
 

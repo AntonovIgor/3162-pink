@@ -32,7 +32,7 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .promo-text {
     padding-right: 100px;
     padding-left: 100px;
@@ -62,7 +62,7 @@
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .promo-text {
     @include margin-center();
 

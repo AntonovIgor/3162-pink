@@ -16,7 +16,7 @@
   text-decoration: none;
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .btn {
     @include font(21px, 21px);
   }

@@ -2,7 +2,7 @@
   display: none;
 }
 
-@include media_queries(M){
+@include media_queries_m() {
   .proof {
     display: block;
 
@@ -65,7 +65,7 @@
       @include font-set(700, 30px, 36px);
 
       margin-top: 36px;
-      margin-bottom: 0px;
+      margin-bottom: 0;
 
       width: 200px;
     }
@@ -87,7 +87,7 @@
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .proof {
     background-color: $twelfth-color;
 
@@ -144,7 +144,7 @@
       @include font-set(700, 30px, 36px);
 
       margin-top: 91px;
-      margin-bottom: 0px;
+      margin-bottom: 0;
       width: 100%;
     }
 

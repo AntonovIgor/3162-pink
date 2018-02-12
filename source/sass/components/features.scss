@@ -69,7 +69,7 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .features {
     &__main-title {
       @include font(40px, 48px);
@@ -126,7 +126,7 @@
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .features {
     &__main-title {
       @include font(50px, 60px);
@@ -137,8 +137,8 @@
 
     &__span {
       &--top {
+        margin-bottom: 0;
         width: 800px;
-        margin-bottom: 0px;
       }
 
       &--bottom {

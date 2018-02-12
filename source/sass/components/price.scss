@@ -141,7 +141,6 @@
 
         width: 35px;
         height: 3px;
-
       }
     }
   }
@@ -153,7 +152,7 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .price {
     padding-top: 88px;
     padding-bottom: 67px;
@@ -203,7 +202,7 @@
 
       &--yes {
         &::before {
-          top: 0px;
+          top: 0;
           right: 50%;
 
           transform: translate(50%, 67%) rotate(-45deg);
@@ -236,7 +235,7 @@
 }
 
 
-@include media_queries(L) {
+@include media_queries_l() {
   .price {
     padding-top: 154px;
     padding-bottom: 95px;

@@ -362,7 +362,7 @@
   }
 }
 
-@include media_queries(M) {
+@include media_queries_m() {
   .feedback-form {
     display: flex;
     flex-direction: column;
@@ -549,7 +549,7 @@
   }
 }
 
-@include media_queries(L) {
+@include media_queries_l() {
   .feedback-form {
     @include margin-center();
 
