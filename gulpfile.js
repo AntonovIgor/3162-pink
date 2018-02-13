@@ -6,10 +6,11 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-var pump = require('pump');
-var svgmin = require('gulp-svgmin');
-var svgstore = require('gulp-svgstore');
-var rename = require('gulp-rename');
+var pump = require("pump");
+var svgmin = require("gulp-svgmin");
+var svgstore = require("gulp-svgstore");
+var rename = require("gulp-rename");
+var minify = require("gulp-csso");
 
 gulp.task("style", function() {
   gulp.src("source/sass/main.scss")
@@ -19,16 +20,18 @@ gulp.task("style", function() {
       autoprefixer()
     ]))
     .pipe(gulp.dest("source/css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
     .pipe(server.stream());
 });
 
-gulp.task('makeSprite', function() {
+gulp.task("makeSprite", function() {
   pump([
-    gulp.src('source/img/icons/*.svg'),
+    gulp.src("source/img/icons/*.svg"),
     svgmin(),
     svgstore({ inlineSvg: true} ),
-    rename('sprite.svg'),
-    gulp.dest('source/img/icons')
+    rename("sprite.svg"),
+    gulp.dest("source/img/icons")
   ]);
 });
 
