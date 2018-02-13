@@ -14,22 +14,23 @@ var minify = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var run = require("run-sequence");
+var del = require("del");
 
 gulp.task("images", function () {
-    gulp.src("source/img/**/*.{png, jpg, svg}")
+    gulp.src("build/img/**/*.{png, jpg, svg}")
       .pipe(imagemin([
           imagemin.optipng( { optimizationLevel: 3 }),
           imagemin.jpegtran( { progressive: true }),
           imagemin.svgo()
       ]))
 
-      .pipe(gulp.dest("source/img"));
+      .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", function () {
-   gulp.src("source/img/**/*.{png, jpg}")
+   gulp.src("build/img/**/*.{png, jpg}")
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("style", function() {
@@ -39,24 +40,52 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
-gulp.task("makeSprite", function() {
+gulp.task("sprite", function() {
   pump([
     gulp.src("source/img/icons/*.svg"),
     svgmin(),
     svgstore({ inlineSvg: true} ),
     rename("sprite.svg"),
-    gulp.dest("source/img/icons")
+    gulp.dest("build/img/icons")
   ]);
 });
 
-gulp.task("serve", ["images", "makeSprite", "style"], function() {
+gulp.task("copy", function () {
+  gulp.src([
+    "source/fonts/**/*.{woff, woff2}",
+    "source/js/**",
+    "source/img/**",
+    "!source/img/icons/*.svg",
+    "source/img/icons/sprite.svg",
+    "source/*.{html, htm}"
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+});
+
+gulp.task("clean", function () {
+  return del("build");
+});
+
+gulp.task("build", function (done) {
+  run(
+    "clean",
+    "copy",
+    "style",
+    "sprite",
+    "images"
+  );
+});
+
+gulp.task("serve", ["images", "sprite", "style"], function() {
   server.init({
     server: "source/",
     notify: false,
