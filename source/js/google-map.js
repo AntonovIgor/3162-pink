@@ -12,9 +12,3 @@ function initMap() {
   var map = new google.maps.Map(map, { zoom: 16, center: chords });
   var marker = new google.maps.Marker( { position: chords, map: map, icon: image, title: 'Pink' });
 }
-
-
-
-
-
-
