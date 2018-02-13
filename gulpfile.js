@@ -42,5 +42,7 @@ gulp.task("serve", ["style", "makeSprite"], function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("source/js/**/*.js", ["style"]);
+
   gulp.watch("source/*.html").on("change", server.reload);
 });
