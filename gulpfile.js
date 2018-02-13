@@ -11,6 +11,18 @@ var svgmin = require("gulp-svgmin");
 var svgstore = require("gulp-svgstore");
 var rename = require("gulp-rename");
 var minify = require("gulp-csso");
+var imagemin = require("gulp-imagemin");
+
+gulp.task("images", function () {
+  return gulp.src("source/img/**/*.{png, jpg, svg")
+            .pipe(imagemin([
+                imagemin.optipng( { optimizationLevel: 3 }),
+                imagemin.jpegtran( { progressive: true }),
+                imagemin.svgo()
+            ]))
+
+            .pipe(gulp.dest("source/img"));
+});
 
 gulp.task("style", function() {
   gulp.src("source/sass/main.scss")
@@ -36,7 +48,7 @@ gulp.task("makeSprite", function() {
   ]);
 });
 
-gulp.task("serve", ["style", "makeSprite"], function() {
+gulp.task("serve", ["images", "style", "makeSprite"], function() {
   server.init({
     server: "source/",
     notify: false,
