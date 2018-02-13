@@ -12,9 +12,10 @@ var svgstore = require("gulp-svgstore");
 var rename = require("gulp-rename");
 var minify = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
 
 gulp.task("images", function () {
-    gulp.src("source/img/**/*.{png, jpg, svg")
+    gulp.src("source/img/**/*.{png, jpg, svg}")
       .pipe(imagemin([
           imagemin.optipng( { optimizationLevel: 3 }),
           imagemin.jpegtran( { progressive: true }),
@@ -22,6 +23,12 @@ gulp.task("images", function () {
       ]))
 
       .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png, jpg}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("style", function() {
@@ -48,7 +55,7 @@ gulp.task("makeSprite", function() {
   ]);
 });
 
-gulp.task("serve", ["images", "style", "makeSprite"], function() {
+gulp.task("serve", ["images", "makeSprite", "style"], function() {
   server.init({
     server: "source/",
     notify: false,
