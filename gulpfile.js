@@ -87,7 +87,7 @@ gulp.task("build", function (done) {
 
 gulp.task("serve", ["images", "sprite", "style"], function() {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
