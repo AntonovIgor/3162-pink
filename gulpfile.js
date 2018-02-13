@@ -13,6 +13,7 @@ var rename = require("gulp-rename");
 var minify = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
+var run = require("run-sequence");
 
 gulp.task("images", function () {
     gulp.src("source/img/**/*.{png, jpg, svg}")
