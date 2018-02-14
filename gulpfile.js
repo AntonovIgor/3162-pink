@@ -16,6 +16,7 @@ var webp = require("gulp-webp");
 var run = require("run-sequence");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
 
 gulp.task("images", function () {
     gulp.src("build/img/**/*.{png, jpg, svg}")
@@ -53,6 +54,15 @@ gulp.task("htmlmin", function () {
       .pipe(gulp.dest("build"));
 });
 
+gulp.task("jsmin", function () {
+    pump([
+      gulp.src("source/js/**/*.js"),
+        uglify(),
+        rename( { suffix: '.min'} ),
+        gulp.dest("build/js")
+    ]);
+});
+
 gulp.task("sprite", function () {
   pump([
     gulp.src("source/img/icons/*.svg"),
@@ -66,7 +76,6 @@ gulp.task("sprite", function () {
 gulp.task("copy", function () {
   gulp.src([
     "source/fonts/**/*.{woff, woff2}",
-    "source/js/**",
     "source/img/**",
     "!source/img/icons/*.svg"
   ], {
@@ -84,6 +93,7 @@ gulp.task("build", function (done) {
     "clean",
     "copy",
     "htmlmin",
+    "jsmin",
     "style",
     "sprite",
     "images",
