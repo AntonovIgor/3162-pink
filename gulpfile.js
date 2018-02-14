@@ -80,11 +80,12 @@ gulp.task("build", function (done) {
     "copy",
     "style",
     "sprite",
-    "images"
+    "images",
+    done
   );
 });
 
-gulp.task("serve", ["images", "sprite", "style"], function() {
+gulp.task("serve", ["build"], function() {
   server.init({
     server: "build/",
     notify: false,
