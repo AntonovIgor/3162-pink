@@ -62,7 +62,6 @@ gulp.task("copy", function () {
     "source/js/**",
     "source/img/**",
     "!source/img/icons/*.svg",
-    "source/img/icons/sprite.svg",
     "source/*.{html, htm}"
   ], {
     base: "source"
