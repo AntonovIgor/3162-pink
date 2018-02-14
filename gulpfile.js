@@ -15,6 +15,8 @@ var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var run = require("run-sequence");
 var del = require("del");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
 
 gulp.task("images", function () {
     gulp.src("build/img/**/*.{png, jpg, svg}")
@@ -33,7 +35,7 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("style", function() {
+gulp.task("style", function () {
   gulp.src("source/sass/main.scss")
     .pipe(plumber())
     .pipe(sass())
@@ -46,7 +48,22 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task("sprite", function() {
+gulp.task("htmlmin", function () {
+    gulp.src("source/**/*.{html, htm}")
+      .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(gulp.dest("build"));
+});
+
+gulp.task("jsmin", function () {
+    pump([
+      gulp.src("source/js/**/*.js"),
+        uglify(),
+        rename( { suffix: '.min'} ),
+        gulp.dest("build/js")
+    ]);
+});
+
+gulp.task("sprite", function () {
   pump([
     gulp.src("source/img/icons/*.svg"),
     svgmin(),
@@ -59,10 +76,8 @@ gulp.task("sprite", function() {
 gulp.task("copy", function () {
   gulp.src([
     "source/fonts/**/*.{woff, woff2}",
-    "source/js/**",
     "source/img/**",
-    "!source/img/icons/*.svg",
-    "source/*.{html, htm}"
+    "!source/img/icons/*.svg"
   ], {
     base: "source"
   })
@@ -77,6 +92,8 @@ gulp.task("build", function (done) {
   run(
     "clean",
     "copy",
+    "htmlmin",
+    "jsmin",
     "style",
     "sprite",
     "images",
