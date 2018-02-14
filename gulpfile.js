@@ -85,7 +85,7 @@ gulp.task("build", function (done) {
   );
 });
 
-gulp.task("serve", ["build"], function() {
+gulp.task("serve", function() {
   server.init({
     server: "build/",
     notify: false,
