@@ -4,7 +4,7 @@ function initMap() {
   var map = document.querySelector('#map');
   var chords = { lat: 59.938756, lng: 30.3230691 };
   var image = {
-    url: '../img/icons/icon-map-marker.svg',
+    url: '/img/icons/icon-map-marker.svg',
     size: new google.maps.Size(36, 36),
     anchor: new google.maps.Point(15, 15)
   };
