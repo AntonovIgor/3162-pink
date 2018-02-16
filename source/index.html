@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк | Главная</title>
   <link rel="stylesheet" href="./css/style.min.css">
-  <script src="./js/vendor/svg4everybody.min.js">svg4everybody();</script>
+  <script src="./js/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
   <script src="./js/vendor/picturefill.min.js"></script>
 </head>
 
@@ -41,17 +42,23 @@
     <div class="intro  intro--start">
       <div class="intro__wrapper   intro__wrapper--start">
         <h1 class="intro__title  intro__title--start">Взгляните на жизнь иначе!</h1>
-        <a class="intro__btn  btn" href="#">Скачать приложение</a>
+        <a class="intro__btn  btn" href="https://www.apple.com/itunes/" aria-label="Скачать приложение Pink из iTunes">Скачать приложение</a>
         <div class="intro__inner">
-          <svg class="intro__svg  intro__svg--apple" width="46" height="56">
-            <use xlink:href="img/icons/sprite.svg#apple"></use>
-          </svg>
-          <svg class="intro__svg  intro__svg--android" width="42" height="47">
-            <use xlink:href="img/icons/sprite.svg#android"></use>
-          </svg>
-          <svg class="intro__svg  intro__svg--microsoft" width="44" height="42">
-            <use xlink:href="img/icons/sprite.svg#microsoft"></use>
-          </svg>
+          <a href="https://www.apple.com/itunes/" aria-label="Скачать приложение Pink из iTunes">
+            <svg class="intro__svg  intro__svg--apple" width="46" height="56">
+              <use xlink:href="img/icons/sprite.svg#apple"></use>
+            </svg>
+          </a>
+          <a href="https://play.google.com/" aria-label="Скачать приложение Pink из PlayMarket">
+            <svg class="intro__svg  intro__svg--android" width="42" height="47">
+              <use xlink:href="img/icons/sprite.svg#android"></use>
+            </svg>
+          </a>
+          <a href="https://www.microsoft.com/ru-ru/store/appsvnext/windows-phone" aria-label="Скачать приложение Pink из MS Store">
+            <svg class="intro__svg  intro__svg--microsoft" width="44" height="42">
+              <use xlink:href="img/icons/sprite.svg#microsoft"></use>
+            </svg>
+          </a>
         </div>
         <p class="intro__text">
           Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
@@ -78,7 +85,7 @@
             </li>
             <li class="features__item  features__item--third">
               <b class="features__title">Заводит новых&nbsp;друзей</b>
-              <p class="features__description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+              <p class="features__description">Ставьте лайки, комментируте,<br> делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
         </div>

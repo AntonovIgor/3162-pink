@@ -30,7 +30,7 @@
     display: block;
   }
 
-  &__tag {
+  &__author-desc {
     display: none;
   }
 
@@ -73,7 +73,7 @@
       margin-bottom: 2px;
     }
 
-    &__tag {
+    &__author-desc {
       @include font(14px, 30px);
 
       display: block;
@@ -191,7 +191,7 @@
       @include font(24px, 30px);
     }
 
-    &__tag {
+    &__author-desc {
       font-size: 18px;
     }
 
