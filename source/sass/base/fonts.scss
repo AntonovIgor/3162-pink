@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Open Sans";
   font-weight: 300;
+  font-display: swap;
   src: local("Open Sans Light"),
     local("OpenSansLight"),
     url("../fonts/opensanslight.woff") format("woff"),
@@ -10,6 +11,7 @@
 @font-face {
   font-family: "Open Sans";
   font-weight: 400;
+  font-display: swap;
   src: local("Open Sans"),
     local("OpenSans"),
     url("../fonts/opensans.woff") format("woff"),
@@ -19,6 +21,7 @@
 @font-face {
   font-family: "Open Sans";
   font-weight: 700;
+  font-display: swap;
   src: local("Open Sans Bold"),
     local("OpenSansBold"),
     url("../fonts/opensansbold.woff") format("woff"),
