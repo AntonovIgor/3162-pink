@@ -162,7 +162,8 @@
 
 @include media_queries_m() {
   .main-nav {
-    height: 110px;
+    min-height: 110px;
+    height: auto;
 
     &--open {
       margin: 0;
@@ -214,9 +215,10 @@
 
     &__list {
       display: flex;
-      font-weight: wrap;
+      flex-wrap: wrap;
       width: 960px;
       min-height: 110px;
+      height: auto;
     }
 
     &__item {
