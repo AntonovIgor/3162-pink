@@ -63,7 +63,11 @@
 }
 
 .feedback-form__input-check {
-  display: none;
+  opacity: 0;
+
+  &:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+  }
 
   &:checked + .feedback-form__label-check::after {
     visibility: visible;
@@ -72,7 +76,11 @@
 }
 
 .feedback-form__input-radio {
-  display: none;
+  opacity: 0;
+
+  &:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+  }
 
   &:checked + .feedback-form__label-radio::after {
     visibility: visible;
