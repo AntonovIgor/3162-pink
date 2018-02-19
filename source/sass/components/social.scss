@@ -6,46 +6,46 @@
   margin: 0;
   margin-top: 40px;
   margin-bottom: 35px;
+}
 
-  &__link {
-    position: relative;
+.social__link {
+  position: relative;
 
-    box-sizing: border-box;
-    display: block;
-    margin-left: 6px;
+  box-sizing: border-box;
+  display: block;
+  margin-left: 6px;
 
-    font-size: 0;
+  font-size: 0;
 
-    border-width: 3px;
-    border-style: solid;
-    border-color: transparentize($primary-color, 0.7);
-    border-radius: 50%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparentize($primary-color, 0.7);
+  border-radius: 50%;
 
-    transition-duration: 0.25s;
-    margin-right: 6px;
+  transition-duration: 0.25s;
+  margin-right: 6px;
 
-    height: 51px;
-    width: 51px;
+  height: 51px;
+  width: 51px;
 
-    &:hover {
-      border-color: $primary-color;
-    }
-
-    &:active {
-      opacity: 0.1;
-    }
+  &:hover {
+    border-color: $primary-color;
   }
 
-  &__svg {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    fill: $third-color;
-
-    transform: translate(-50%, -50%);
+  &:active {
+    opacity: 0.1;
   }
+}
+
+.social__svg {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  fill: $third-color;
+
+  transform: translate(-50%, -50%);
 }
 
 @include media_queries_m() {

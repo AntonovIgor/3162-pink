@@ -8,39 +8,40 @@
   &--price {
     margin-top: 42px;
   }
+}
 
-  &__toggle {
-    padding: 0;
+.controls__toggle {
+  padding: 0;
 
-    font-size: 0;
-    line-height: 0;
+  font-size: 0;
+  line-height: 0;
 
-    background-color: transparentize($primary-color, 0.7);
-    border: none;
-    border-radius: 50%;
+  background-color: transparentize($primary-color, 0.7);
+  border: none;
+  border-radius: 50%;
 
-    transition-duration: 0.15s;
+  transition-duration: 0.15s;
 
-    margin-right: 9.5px;
-    margin-left: 9.5px;
+  margin-right: 9.5px;
+  margin-left: 9.5px;
 
-    width: 6px;
-    height: 6px;
+  width: 6px;
+  height: 6px;
 
-    &:not(&--current):hover {
-      background-color: transparentize($primary-color, 0.4);
-    }
+  &:not(&--current):hover {
+    background-color: transparentize($primary-color, 0.4);
+  }
 
-    &:not(&--current):active {
-      background-color: transparentize($primary-color, 0.9);
-    }
+  &:not(&--current):active {
+    background-color: transparentize($primary-color, 0.9);
+  }
 
-    &--current {
-      background-color: $secondary-color;
-      box-shadow: 0 0 0 3px $primary-color;
-    }
+  &--current {
+    background-color: $secondary-color;
+    box-shadow: 0 0 0 3px $primary-color;
   }
 }
+
 
 @include media_queries_m() {
   .controls {
