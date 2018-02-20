@@ -6,6 +6,12 @@
   width: 100%;
 }
 
+.upload-form__set-filter-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
 .upload-form__label {
   position: relative;
 
@@ -174,7 +180,7 @@
     align-items: center;
     box-sizing: border-box;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     padding-bottom: 14px;
 
     border-bottom: 1px solid transparentize($primary-color, 0.9);
