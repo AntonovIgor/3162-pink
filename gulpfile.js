@@ -97,7 +97,7 @@ gulp.task("build", function (done) {
     "style",
     "sprite",
     "images",
-   // "webp",
+    "webp",
     done
   );
 });
