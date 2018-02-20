@@ -26,11 +26,12 @@
     padding-bottom: 34px;
     padding-left: 20px;
   }
-
-  &__span {
-    display: none;
-  }
 }
+
+.promo-text__span {
+  display: none;
+}
+
 
 @include media_queries_m() {
   .promo-text {
@@ -55,10 +56,10 @@
       padding-bottom: 72px;
       padding-left: 80px;
     }
+  }
 
-    &__span {
-      display: inline;
-    }
+  .promo-text__span {
+    display: inline;
   }
 }
 

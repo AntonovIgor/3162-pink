@@ -12,151 +12,151 @@
   &--nojs {
     height: auto;
   }
+}
 
-  &__toggle {
-    @include font(0, 0);
+.main-nav__toggle {
+  @include font(0, 0);
 
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 
-    position: absolute;
-    top: 21px;
-    right: 20px;
-    z-index: 1;
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  z-index: 1;
+
+  width: 50px;
+  height: 24px;
+
+  &--nojs {
+    display: none;
+  }
+
+  &::before {
+    @include absolute-pseudo-element();
+
+    background-color: $secondary-color;
+    box-shadow: 0 10px $secondary-color,
+      0 2px 0 -1px transparentize($secondary-color, 0.85);
+    transition-duration: 0.25s;
+
+    top: 0;
+    left: 0;
 
     width: 50px;
-    height: 24px;
-
-    &--nojs {
-      display: none;
-    }
-
-    &::before {
-      @include absolute-pseudo-element();
-
-      background-color: $secondary-color;
-      box-shadow: 0 10px $secondary-color,
-        0 2px 0 -1px transparentize($secondary-color, 0.85);
-      transition-duration: 0.25s;
-
-      top: 0;
-      left: 0;
-
-      width: 50px;
-      height: 4px;
-    }
-
-    &:hover::before {
-      background-color: $third-color;
-      box-shadow: 0 10px $third-color,
-        0 2px 0 -1px transparentize($third-color, 0.85);
-    }
-
-    &::after {
-      @include absolute-pseudo-element();
-
-      background-color: $secondary-color;
-      box-shadow: 0 -2px 0 -1px transparentize($secondary-color, 0.85);
-
-      transition-duration: 0.25s;
-
-      left: 0;
-      bottom: 0;
-
-      height: 4px;
-      width: 50px;
-    }
-
-    &:hover::after {
-      background-color: $third-color;
-    }
-
-    &--open {
-      top: 21px;
-      right: 20px;
-
-      height: 23px;
-      width: 23px;
-
-      &::before {
-        border-radius: 2px;
-        box-shadow: none;
-        transform: translate(-50%, -50%) rotate(-45deg);
-
-        top: 50%;
-        left: 50%;
-
-        height: 5px;
-        width: 31px;
-      }
-
-      &:hover::before {
-        box-shadow: none;
-      }
-
-      &::after {
-        border-radius: 2px;
-        box-shadow: none;
-        transform: translate(-50%, -50%) rotate(45deg);
-
-        top: 50%;
-        left: 50%;
-
-        height: 5px;
-        width: 31px;
-      }
-    }
+    height: 4px;
   }
 
-  &__list {
-    @include clear-list();
-
-    width: 100%;
+  &:hover::before {
+    background-color: $third-color;
+    box-shadow: 0 10px $third-color,
+      0 2px 0 -1px transparentize($third-color, 0.85);
   }
 
-  &__item {
-    box-sizing: border-box;
+  &::after {
+    @include absolute-pseudo-element();
 
-    background-color: $primary-color;
-    box-shadow: inset 0 -1px $fifth-color,
-      inset 0 1px transparentize($secondary-color, 0.85);
-
-    &--logo {
-      min-height: 70px;
-      padding-top: 22px;
-      padding-left: 20px;
-
-      &-open {
-        background-color: transparentize($fifth-color, 0.7);
-      }
-    }
-
-    &--nojs {
-      background-color: $primary-color;
-    }
-  }
-
-  &__link {
-    @include font-set(700, 18px, 64px);
-
-    display: block;
-    min-height: 64px;
-
-    color: $secondary-color;
-
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+    background-color: $secondary-color;
+    box-shadow: 0 -2px 0 -1px transparentize($secondary-color, 0.85);
 
     transition-duration: 0.25s;
 
-    &:not(&--active):hover {
-      color: $third-color;
+    left: 0;
+    bottom: 0;
+
+    height: 4px;
+    width: 50px;
+  }
+
+  &:hover::after {
+    background-color: $third-color;
+  }
+
+  &--open {
+    top: 21px;
+    right: 20px;
+
+    height: 23px;
+    width: 23px;
+
+    &::before {
+      border-radius: 2px;
+      box-shadow: none;
+      transform: translate(-50%, -50%) rotate(-45deg);
+
+      top: 50%;
+      left: 50%;
+
+      height: 5px;
+      width: 31px;
     }
 
-    &:active {
-      color: transparentize($third-color, 0.7);
+    &:hover::before {
+      box-shadow: none;
     }
+
+    &::after {
+      border-radius: 2px;
+      box-shadow: none;
+      transform: translate(-50%, -50%) rotate(45deg);
+
+      top: 50%;
+      left: 50%;
+
+      height: 5px;
+      width: 31px;
+    }
+  }
+}
+
+.main-nav__list {
+  @include clear-list();
+
+  width: 100%;
+}
+
+.main-nav__item {
+  box-sizing: border-box;
+
+  background-color: $primary-color;
+  box-shadow: inset 0 -1px $fifth-color,
+    inset 0 1px transparentize($secondary-color, 0.85);
+
+  &--nojs {
+    background-color: $primary-color;
+  }
+}
+
+.main-nav__item--logo {
+  min-height: 70px;
+  padding-top: 22px;
+  padding-left: 20px;
+}
+
+.main-nav__item--logo-open {
+  background-color: transparentize($fifth-color, 0.7);
+}
+
+.main-nav__link {
+  @include font-set(700, 18px, 64px);
+
+  display: block;
+  min-height: 64px;
+
+  color: $secondary-color;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition-duration: 0.25s;
+
+  &:not(&--active):hover {
+    color: $third-color;
+  }
+
+  &:active {
+    color: transparentize($third-color, 0.7);
   }
 }
 
@@ -171,30 +171,28 @@
     &--nojs {
       height: auto;
     }
+  }
 
-    &__toggle {
-      top: 45px;
-    }
+  .main-nav__toggle {
+    top: 45px;
+  }
 
-    &__item {
-      &--logo {
-        min-height: 110px;
-        padding-top: 27px;
-        padding-left: 19px;
+  .main-nav__item--logo {
+    min-height: 110px;
+    padding-top: 27px;
+    padding-left: 19px;
 
-        box-shadow: inset 0 -1px $fifth-color,
-          inset 0 1px transparentize($secondary-color, 0.85);
+    box-shadow: inset 0 -1px $fifth-color,
+      inset 0 1px transparentize($secondary-color, 0.85);
+  }
 
-        &-open {
-          box-shadow: none;
-        }
-      }
-    }
+  .main-nav__item--logo-open {
+    box-shadow: none;
+  }
 
-    &__link {
-      display: block;
-      min-height: 64px;
-    }
+  .main-nav__link {
+    display: block;
+    min-height: 64px;
   }
 }
 
@@ -207,61 +205,61 @@
     background-color: transparentize($fifth-color, 0.7);
 
     overflow: inherit;
+  }
 
-    &__toggle {
-      display: none;
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    font-weight: wrap;
+    width: 960px;
+    min-height: 110px;
+  }
+
+  .main-nav__item {
+    background-color: transparent;
+    box-shadow: none;
+
+    display: flex;
+    align-items: center;
+    margin-left: 62px;
+
+    padding-top: 0;
+    padding-right: 9px;
+    padding-left: 9px;
+
+    &--logo {
+      margin-right: auto;
+      margin-left: 0;
+      padding-bottom: 17px;
     }
 
-    &__list {
-      display: flex;
-      font-weight: wrap;
-      width: 960px;
-      min-height: 110px;
+    &:nth-of-type(2) {
+      margin-left: 0;
+    }
+  }
+
+  .main-nav__link {
+    @include font-set(400, 18px, 41px);
+
+    display: block;
+    min-height: auto;
+
+    text-transform: none;
+
+    &:not(&--active):hover {
+      color: $third-color;
     }
 
-    &__item {
-      background-color: transparent;
-      box-shadow: none;
-
-      display: flex;
-      align-items: center;
-      margin-left: 62px;
-
-      padding-top: 0;
-      padding-right: 9px;
-      padding-left: 9px;
-
-      &--logo {
-        margin-right: auto;
-        margin-left: 0;
-        padding-bottom: 17px;
-      }
-
-      &:nth-of-type(2) {
-        margin-left: 0;
-      }
+    &:not(&--active):active {
+      color: transparentize($secondary-color, 0.7);
     }
 
-    &__link {
-      @include font-set(400, 18px, 41px);
-
-      display: block;
-      min-height: auto;
-
-      text-transform: none;
-
-      &:not(&--active):hover {
-        color: $third-color;
-      }
-
-      &:not(&--active):active {
-        color: transparentize($secondary-color, 0.7);
-      }
-
-      &--active {
-        color: $secondary-color;
-        box-shadow: 0 2px 0 0 $secondary-color;
-      }
+    &--active {
+      color: $secondary-color;
+      box-shadow: 0 2px 0 0 $secondary-color;
     }
   }
 }

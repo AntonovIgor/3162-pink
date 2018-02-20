@@ -9,21 +9,19 @@
     width: 148px;
     height: 40px;
   }
+}
 
-  &__svg-footer {
-    &-mobile {
-      fill: $primary-color;
-      transition: 0.15s;
+.logo__svg-footer-mobile {
+  fill: $primary-color;
+  transition: 0.15s;
 
-      &:hover {
-        fill: $third-color;
-      }
-    }
-
-    &-desktop {
-      display: none;
-    }
+  &:hover {
+    fill: $third-color;
   }
+}
+
+.logo__svg-footer-desktop {
+  display: none;
 }
 
 @include media_queries_m() {
@@ -42,17 +40,13 @@
   .logo {
     width: 147px;
     height: 40px;
+  }
 
-    &__svg {
-      &-footer {
-        &-mobile {
-          display: none;
-        }
+  .logo__svg-footer-mobile {
+    display: none;
+  }
 
-        &-desktop {
-          display: inline;
-        }
-      }
-    }
+  .logo__svg-footer-desktop {
+    display: inline;
   }
 }
