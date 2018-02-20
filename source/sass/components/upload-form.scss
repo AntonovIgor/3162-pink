@@ -36,7 +36,6 @@
   min-height: 363px;
 }
 
-
 .upload-form__inner-top {
   position: relative;
 
@@ -143,7 +142,6 @@
     }
   }
 }
-
 
 @include media_queries_m() {
   .upload-form {
@@ -316,4 +314,3 @@
     padding-left: 0;
   }
 }
-
